@@ -4,6 +4,16 @@
       "source": "/donate",
       "destination": "https://www.donationalerts.com/r/moonstudioanimation",
       "permanent": true
+    },
+      {
+      "source": "/go/youtube",
+      "destination": "https://www.youtube.com/MoonStudioAnimation",
+      "permanent": true
+    },
+    {
+      "source": "/go/discord",
+      "destination": "https://discord.com/invite/KnmPbE6XGT",
+      "permanent": true
     }
   ]
 }
