@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/donate",
+      "destination": "https://www.donationalerts.com/r/moonstudioanimation",
+      "permanent": true
+    }
+  ]
+}
