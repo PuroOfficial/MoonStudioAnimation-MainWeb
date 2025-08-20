@@ -1,0 +1,7 @@
+User-agent: *
+User-agent: Yandex
+# This only applies to redirects.
+Disallow: /donate
+Disallow: /go
+
+# TODO: Add sitemap for robots.
