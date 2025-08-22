@@ -1,11 +1,12 @@
 {
+  "version": 2,
   "redirects": [
     {
       "source": "/donate",
       "destination": "https://www.donationalerts.com/r/moonstudioanimation",
       "permanent": true
     },
-      {
+    {
       "source": "/go/youtube",
       "destination": "https://www.youtube.com/MoonStudioAnimation",
       "permanent": true
