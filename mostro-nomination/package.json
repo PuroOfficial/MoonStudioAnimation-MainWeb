@@ -1,24 +1,14 @@
 {
-    "name": "vercel-blob-voting-server",
-    "version": "1.0.0",
-    "description": "Server for Vercel Blob Storage voting system",
-    "main": "server.js",
-    "scripts": {
-        "dev": "next dev",
-        "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
-        "dev:debug": "NODE_OPTIONS='--inspect' next dev"
-    },
-    "dependencies": {
-        "@vercel/blob": "^0.19.0",
-        "cors": "^2.8.5",
-        "express": "^4.18.2",
-        "next": "^15.5.0",
-        "react": "^19.1.1",
-        "react-dom": "^19.1.1"
-    },
-    "devDependencies": {
-        "nodemon": "^3.0.1"
-    }
+  "name": "mostro-nomination-voting",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  }
 }
