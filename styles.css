@@ -225,6 +225,12 @@ body {
     border: 1px solid rgba(255, 204, 0, 0.3);
 }
 
+.patio-link:hover {
+    background: linear-gradient(135deg, rgba(0, 204, 0, 0.2), rgba(0, 220, 100, 0.1));
+    border: 1px solid rgba(0, 204, 0, 0.3);
+}
+
+
 @keyframes elasticBounce {
     0% {
         transform: scale(1);
