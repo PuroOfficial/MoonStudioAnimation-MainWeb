@@ -96,6 +96,10 @@ body {
     animation: fadeInUp 1s ease-out 0.3s both;
 }
 
+.website-projects {
+    animation: fadeInUp 1s ease-out 0.5s both;
+}
+
 .tagline {
     font-family: 'Gotham', sans-serif;
     font-size: 3rem;
