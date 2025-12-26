@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/logos",
+      "destination": "/branding",
+      "permanent": true
+    },
+    {
       "source": "/donate",
       "destination": "https://www.donationalerts.com/r/moonstudioanimation",
       "permanent": true
