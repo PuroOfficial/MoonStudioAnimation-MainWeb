@@ -100,6 +100,11 @@ body {
     animation: fadeInUp 1s ease-out 0.5s both;
 }
 
+.branding-content {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 30px;
+}
+
 .tagline {
     font-family: 'Gotham', sans-serif;
     font-size: 3rem;
