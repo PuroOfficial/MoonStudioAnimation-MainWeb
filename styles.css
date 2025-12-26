@@ -96,6 +96,10 @@ body {
     animation: fadeInUp 1s ease-out 0.3s both;
 }
 
+.introduce {
+    animation: fadeInUp 1s ease-out 1s both;
+}
+
 .website-projects {
     animation: fadeInUp 1s ease-out 0.5s both;
 }
