@@ -1,17 +1,146 @@
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Country Blocked | Moon Studio Animation</title>
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
 
+        <!-- More Icons -->
+        <link rel="apple-touch-icon" href="/branding/apple-touch-icon-76x76.png" sizes="76x76">
+        <link rel="apple-touch-icon" href="/branding/apple-touch-icon-120x120.png" sizes="120x120">
+        <link rel="apple-touch-icon" href="/branding/apple-touch-icon-152x152.png" sizes="152x152">
+        <link rel="apple-touch-icon" href="/branding/apple-touch-icon-180x180.png" sizes="180x180">
+        <link rel="shortcut icon" href="/branding/shortcut-icon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" href="/branding/shortcut-icon-32x32.png" sizes="32x32">
+        <link rel="shortcut icon" href="/branding/shortcut-icon-192x192.png" sizes="192x192">
+
+        <style>
+            @font-face {
+                font-family: 'Gotham';
+                src: url('/Gotham-Bold.otf') format('opentype');
+                font-weight: bold;
+            }
+    
+            @font-face {
+                font-family: 'ProximaNova';
+                src: url('/ProximaNova-Regular.ttf') format('truetype');
+                font-weight: normal;
+            }
+    
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                font-family: 'ProximaNova', sans-serif;
+                background: #0a0a0a;
+                color: #ffffff;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 20px;
+            }
+    
+            .error-container {
+                max-width: 600px;
+            }
+    
+            .logo {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 40px;
+            }
+    
+            .logo-icon {
+                width: 50px;
+                height: 50px;
+                filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+            }
+    
+            .logo-text {
+                font-family: 'Gotham', sans-serif;
+                font-size: 1.8rem;
+                font-weight: bold;
+                color: #ffffff;
+            }
+    
+            .block-code {
+                font-family: 'Gotham', sans-serif;
+                font-size: 6rem;
+                font-weight: bold;
+                color: #666666;
+                margin-bottom: 20px;
+            }
+    
+            .block-title {
+                font-family: 'Gotham', sans-serif;
+                font-size: 2rem;
+                margin-bottom: 20px;
+                color: #ffffff;
+            }
+    
+            .block-description {
+                font-size: 1.1rem;
+                color: #cccccc;
+                margin-bottom: 40px;
+                line-height: 1.6;
+            }
+    
+            .home-link {
+                display: inline-block;
+                padding: 15px 30px;
+                background: rgba(255, 255, 255, 0.1);
+                color: white;
+                text-decoration: none;
+                border-radius: 25px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                transition: all 0.3s ease;
+                font-family: 'ProximaNova', sans-serif;
+            }
+    
+            .home-link:hover {
+                background: rgba(255, 255, 255, 0.2);
+                transform: translateY(-2px);
+            }
+    
+            @media (max-width: 768px) {
+                .logo {
+                    flex-direction: column;
+                    gap: 15px;
+                }
+                
+                .logo-text {
+                    font-size: 1.5rem;
+                }
+                
+                .block-code {
+                    font-size: 4rem;
+                }
+                
+                .block-title {
+                    font-size: 1.5rem;
+                }
+            }
+        </style>
     </head>
 
     <body>
-        <h1>Access to itsmoon.space was forbidden by Moon Studio Animation</h1>
+        <h1 class="block-title">Access to itsmoon.space was forbidden by Moon Studio Animation</h1>
         <hr>
-        <p>Due to your website activity, Your country is temporarily blacklisted from viewing this sub-domain.</p>
+        <p class="block-description">Due to your website activity, Your country is temporarily blacklisted from viewing this sub-domain.</p>
         <br>
-        <h3>It's better If you report issues, and be the white hat.</h3>
+        <h3 class="block-description">It's better If you report issues, and be the white hat.</h3>
         <br>
-        <p>Please contact the admin via email or discord.</p>
-        <p><b>Email:</b> realmoonstudioanimation@gmail.com</p>
-        <p><b>Discord:</b> moonstudioanimation</p>
+        <p class="block-description">Please contact the admin via email or discord.</p>
+        <p class="block-description"><b>Email:</b> realmoonstudioanimation@gmail.com</p>
+        <p class="block-description"><b>Discord:</b> moonstudioanimation</p>
     </body>
 </html>
