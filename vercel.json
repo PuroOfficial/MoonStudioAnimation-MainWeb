@@ -21,8 +21,14 @@
       "permanent": true
     },
     {
-       "source": "/moons-surreal-complex"
-       "destination": "/games/moons-surreal-complex"
+      "source": "/moons-surreal-complex",
+      "destination": "/games/moons-surreal-complex/",
+      "permanent": false
+    },
+    {
+      "source": "games/moons-surreal-complex",
+      "destination": "/games/moons-surreal-complex/",
+      "permanent": false
     }
   ]
 }
