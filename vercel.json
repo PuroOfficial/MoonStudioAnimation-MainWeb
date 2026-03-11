@@ -19,6 +19,10 @@
       "source": "/go/discord",
       "destination": "https://discord.com/invite/YtWgSHaX3G",
       "permanent": true
+    },
+    {
+       "source": "/moons-surreal-complex"
+       "destination": "/games/moons-surreal-complex"
     }
   ]
 }
