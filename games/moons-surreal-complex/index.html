@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <title>Moon's Surreal Complex, a game that is surreal!</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="../../global-assets/self-insert-header-style.css">
 
     <meta name="author" content="Moon Studio Animation">
     <meta property="og:title" content="Moon's Surreal Complex">
@@ -14,12 +15,54 @@
         body {
             text-align: center;
             font-family: 'Comic Sans MS';
+            margin: auto;
         }
     </style>
 </head>
 
 
     <body>
+        <!-- Begin Self-insert header -->
+        <div class="self-insert-header">
+            <a style="display: flex; gap: 30px; text-decoration: none;" title="Click here to see my portfolio!" href="https://www.itsmoon.space/">
+                <img class="self-insert-moon-logo" src="../../assets/favicon.jpg">
+                <h1 class="self-insert-text">Moon Studio Animation</h1>
+            </a>
+            <p class="self-insert-text">Bringing humor to anything.</p>
+
+            <canvas class="self-insert-matrix" id="matrix" width="130" height="70"></canvas>
+            <script>
+                const canvas = document.getElementById("matrix");
+                const ctx = canvas.getContext("2d");
+                const allowedChars = "moon studio animation";
+                const fontSize = 15;
+                const columns = canvas.width / fontSize;
+                let drops = [];
+
+                for (let i = 0; i < columns; i++) { 
+                    drops[i] = 1; 
+                }
+
+                function draw() {
+                    ctx.fillStyle = "rgba(0,0,0,0.15)";
+                    ctx.fillRect(0, 0, canvas.width, canvas.height);
+                    ctx.fillStyle = "#ffffff";
+                    ctx.font = fontSize + "px monospace";
+                    for (let i = 0; i < drops.length; i++) {
+                        const text = allowedChars.charAt(Math.floor(Math.random() * allowedChars.length));
+                        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                            drops[i] = 0;
+                        } drops[i]++; 
+                    } 
+                }
+
+                setInterval(draw, 65);
+            </script>
+        </div>
+        <!-- End Self-insert Header -->
+
         <img title="Moon's Surreal Complex" src="title.png">
 
         <h2>

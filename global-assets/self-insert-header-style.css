@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('/Gotham-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('/ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+.self-insert-header {
+    display: flex;
+    gap: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    background-color: black;
+    margin-bottom: 50px;
+    filter: drop-shadow(-15px 20px 5px black) drop-shadow(30px 0px 5px black);
+    align-items: center;
+    animation: fadeInDown 0.5s ease-in-out;
+}
+
+.self-insert-moon-logo {
+    width: 70px;
+    height: 70px;
+}
+
+.self-insert-text {
+    color: white;
+    font-family: 'ProximaNova', monospace;
+}
+
+.self-insert-matrix {
+    position: absolute;
+    right: 30px;
+}
+
+ /* 3x3 pixel font for matrix */
+.pixel
+{
+    font-family: monospace;
+    font-size:18px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
