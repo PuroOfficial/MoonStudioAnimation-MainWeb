@@ -100,6 +100,221 @@ body {
     animation: fadeInUp 1s ease-out 1s both;
 }
 
+.misty-corner {
+    animation: fadeInUp 1s ease-out 0.5s both;
+    margin: 40px auto 0;
+    padding: 28px 22px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+    position: relative;
+    overflow: hidden;
+}
+
+.misty-corner::before {
+    content: "";
+    position: absolute;
+    inset: -60px;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.07) 0 8px, transparent 9px),
+        radial-gradient(circle at 18% 26%, rgba(255, 255, 255, 0.04) 0 14px, transparent 15px),
+        radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.05) 0 10px, transparent 11px),
+        radial-gradient(circle at 82% 38%, rgba(255, 255, 255, 0.03) 0 16px, transparent 17px),
+        radial-gradient(circle at 30% 78%, rgba(255, 255, 255, 0.05) 0 12px, transparent 13px),
+        radial-gradient(circle at 44% 88%, rgba(255, 255, 255, 0.03) 0 18px, transparent 19px);
+    filter: blur(0.2px);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.misty-corner > * {
+    position: relative;
+    z-index: 1;
+}
+
+.misty-subtitle {
+    margin: -12px auto 18px;
+    max-width: 70ch;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.misty-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.misty-controls {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 18px;
+}
+
+.misty-toggle-label {
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.92);
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+#misty-silly-toggle:focus-visible ~ .misty-controls .misty-toggle-label {
+    outline: 3px solid rgba(0, 172, 255, 0.65);
+    outline-offset: 4px;
+}
+
+#misty-silly-toggle:checked ~ .misty-controls .misty-toggle-label {
+    background: rgba(0, 172, 255, 0.14);
+    border-color: rgba(0, 172, 255, 0.35);
+    transform: rotate(-1deg) scale(1.03);
+}
+
+.misty-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    align-items: stretch;
+}
+
+.misty-card {
+    position: relative;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.misty-card:hover {
+    transform: translateY(-6px) rotate(-0.6deg);
+    border-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+}
+
+.misty-photo {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+    filter: saturate(1.05) contrast(1.02);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.3s ease;
+}
+
+.misty-card:hover .misty-photo {
+    transform: scale(1.04);
+    filter: saturate(1.12) contrast(1.04);
+}
+
+.misty-card figcaption {
+    padding: 12px 14px 14px;
+    color: rgba(255, 255, 255, 0.86);
+    font-size: 0.98rem;
+    line-height: 1.35;
+}
+
+#misty-silly-toggle:checked ~ .misty-gallery .misty-card {
+    animation: mistyRageShake 0.18s linear infinite;
+}
+
+#misty-silly-toggle:checked ~ .misty-gallery .misty-card:nth-child(2) {
+    animation-duration: 0.16s;
+}
+
+#misty-silly-toggle:checked ~ .misty-gallery .misty-card:nth-child(3) {
+    animation-duration: 0.2s;
+}
+
+#misty-silly-toggle:checked ~ .misty-gallery .misty-card::after {
+    content: attr(data-say);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(8px);
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 0.9rem;
+    transform: rotate(3deg);
+    animation: mistyPop 0.35s ease-out both;
+}
+
+@keyframes mistyRageShake {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    10% { transform: translate(-7px, -5px) rotate(-8deg); }
+    20% { transform: translate(6px, 5px) rotate(7deg); }
+    30% { transform: translate(-6px, 6px) rotate(-6deg); }
+    40% { transform: translate(7px, -6px) rotate(8deg); }
+    50% { transform: translate(-8px, 4px) rotate(-9deg); }
+    60% { transform: translate(6px, -4px) rotate(7deg); }
+    70% { transform: translate(-5px, -6px) rotate(-7deg); }
+    80% { transform: translate(7px, 6px) rotate(9deg); }
+    90% { transform: translate(-6px, 5px) rotate(-8deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes mistyPop {
+    from { opacity: 0; transform: translateY(-6px) scale(0.96) rotate(3deg); }
+    to { opacity: 1; transform: translateY(0) scale(1) rotate(3deg); }
+}
+
+body:has(#misty-silly-toggle:checked)::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    background:
+        radial-gradient(closest-side at 12% 16%, rgba(255, 105, 180, 0.22), transparent 60%),
+        radial-gradient(closest-side at 88% 18%, rgba(255, 105, 180, 0.18), transparent 62%),
+        radial-gradient(closest-side at 50% 86%, rgba(255, 105, 180, 0.16), transparent 60%),
+        radial-gradient(closest-side at 50% 50%, transparent 62%, rgba(255, 105, 180, 0.22) 100%);
+    mix-blend-mode: screen;
+    animation: mistyBlushPulse 0.9s ease-in-out infinite;
+}
+
+@keyframes mistyBlushPulse {
+    0%, 100% { opacity: 0.85; filter: blur(0px); }
+    50% { opacity: 1; filter: blur(0.4px); }
+}
+
+@media (max-width: 900px) {
+    .misty-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 620px) {
+    .misty-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #misty-silly-toggle:checked ~ .misty-gallery .misty-card {
+        animation: none;
+    }
+
+    body:has(#misty-silly-toggle:checked)::after {
+        animation: none;
+    }
+}
+
 .website-projects {
     animation: fadeInUp 1s ease-out 0.5s both;
 }
@@ -216,6 +431,11 @@ body {
 .youtube-link:hover {
     background: linear-gradient(135deg, rgba(255, 0, 0, 0.2), rgba(255, 100, 100, 0.1));
     border: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+.tiktok-link:hover {
+    background: linear-gradient(135deg, rgba(255, 0, 128, 0.2), rgba(255, 100, 100, 0.1));
+    border: 1px solid rgba(255, 0, 128, 0.3);
 }
 
 .roblox-link:hover {
